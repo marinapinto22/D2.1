@@ -1,0 +1,52 @@
+/*Variaveis*/
+
+$color-main: #ffffff;
+$titles-color: #000000;
+$hover-color: rgba($titles-color, .15);
+
+/*Mixins*/
+@mixin centrarvh{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin text {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin nav_items {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  background-color: $color-main;
+  color: $titles-color;
+  padding: 4vh 5vw;
+  font-size: 2vh;
+}
+
+@mixin images_transition {
+  -webkit-transition: opacity 2.0s ease-in;
+  -moz-transition: opacity 2.0s ease-in;
+  -o-transition: opacity 2.0s ease-in;
+  opacity: 1;
+}
+
+/*Formatacao Links*/
+@mixin link_visited {
+  color: lighten($titles-color,50%);
+  text-decoration: none;
+}
+
+@mixin just_link {
+  color: $titles-color;
+  text-decoration: none;
+}
+
+@mixin link_hover {
+  background-color: $hover-color;
+  text-decoration: none;
+}
+/*Fim Formatacao Links*/

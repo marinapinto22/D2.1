@@ -1,0 +1,407 @@
+@charset "UTF-8";
+/*Reset*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*Fim do reset*/
+/*Variaveis*/
+/*Mixins*/
+/*Formatacao Links*/
+/*Fim Formatacao Links*/
+/*Formatacao geral site*/
+body {
+  background-color: #ffffff;
+  overflow-y: hidden;
+}
+
+/*Formatacao work template*/
+/*Page one and two*/
+.pageone, .pagetwo {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+/*Page2*/
+.centrardescription {
+  padding-top: 10vh;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description {
+  display: block;
+  width: 40vw;
+  /*Importante Media Queries*/
+}
+
+.botaovoltar {
+  text-align: center;
+}
+
+.botaovoltar > a > img {
+  max-height: 30px;
+}
+
+.description p {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  padding-top: 10px;
+  font-size: 0.8em;
+  line-height: 2em;
+}
+
+.description h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: #000000;
+}
+
+.description > h1 > span {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #b3b3b3;
+  font-size: 0.75em;
+}
+
+/*Fim Page2*/
+/*Page1*/
+/*nav galeria*/
+.gallery > nav > ul {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 599;
+}
+
+.gallery > nav > ul > li > a {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 4vh 5vw;
+  font-size: 2vh;
+  line-height: 10vh;
+  /*Importante Media Queries*/
+}
+
+/*fim nav galeria*/
+/*imagens*/
+.imagens {
+  position: absolute;
+  bottom: 0;
+  left: -100vw;
+  height: 100vh;
+  width: auto;
+  opacity: 0;
+}
+
+.imagens:target {
+  position: relative;
+  width: 100vw;
+  left: 0;
+  -webkit-transition: opacity 2.0s ease-in;
+  -moz-transition: opacity 2.0s ease-in;
+  -o-transition: opacity 2.0s ease-in;
+  opacity: 1;
+}
+
+.imagens > figure > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 50vw;
+  /*Importante media queries*/
+  height: auto;
+}
+
+/*fim imagens*/
+/*Video*/
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+.video-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  /*Importante Media Queries*/
+}
+
+/*Fim video*/
+/*Fim galeria*/
+/*Formatacao Nav*/
+.navbar > nav > ul {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/*Texto Nav*/
+.navbar > nav > ul > li > a {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 4vh 5vw;
+  font-size: 2vh;
+  display: flex;
+}
+
+/*Fim texto nav*/
+/*Formatacao Links*/
+.gallery > nav > ul > li > a:visited {
+  color: gray;
+  text-decoration: none;
+}
+
+.gallery > nav > ul > li > a:link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.gallery > nav > ul > li > a:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+.navbar > nav > ul > li > a:visited {
+  color: gray;
+  text-decoration: none;
+}
+
+.navbar > nav > ul > li > a:link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.navbar > nav > ul > li > a:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+/*Fim Formatacao Links*/
+/*MEDIA QUERIES*/
+/*Vista de smartphone portrait*/
+@media only screen and (max-width: 480px) {
+  .description {
+    width: 90vw;
+  }
+  .gallery > nav > ul {
+    justify-content: space-around;
+  }
+  .gallery > nav > ul > li > a {
+    font-size: 1em;
+    line-height: 10vh;
+  }
+  .video-wrapper {
+    width: 90vw;
+  }
+  .imagens > figure > img {
+    max-width: 90vw;
+  }
+  .navbar > nav > ul {
+    justify-content: space-around;
+  }
+}
+
+/*Fim vista de smartphone portrait*/
+/*Vista de tablet*/
+@media only screen and (min-width: 481px) and (max-width: 650px) {
+  .description {
+    width: 70vw;
+  }
+  .gallery > nav > ul > li > a {
+    font-size: 0.5em;
+    line-height: 10vh;
+  }
+  .video-wrapper {
+    width: 70vw;
+  }
+  .imagens > figure > img {
+    max-width: 70vw;
+  }
+}
+
+/*Vista de pequeno computador/ ipad*/
+@media only screen and (min-width: 651px) and (max-width: 773px) {
+  .description {
+    width: 60vw;
+  }
+  .gallery > nav > ul > li > a {
+    font-size: 0.8em;
+    line-height: 10vh;
+  }
+  .video-wrapper {
+    width: 60vw;
+  }
+  .imagens > figure > img {
+    max-width: 60vw;
+  }
+}
+
+/* Vista de iPads (portrait)*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .description {
+    width: 60vw;
+  }
+  .gallery > nav > ul > li > a {
+    font-size: 1.5em;
+    line-height: 10vh;
+  }
+  .video-wrapper {
+    width: 80vw;
+  }
+  .imagens > figure > img {
+    max-width: 80vw;
+  }
+}
+
+/* Vista de iPads (landscape)*/
+@media only screen and (min-device-width: 774px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .description {
+    width: 50vw;
+  }
+  .gallery > nav > ul > li > a {
+    font-size: 1.5em;
+    line-height: 10vh;
+  }
+  .video-wrapper {
+    width: 70vw;
+  }
+  .imagens > figure > img {
+    max-width: 70vw;
+  }
+}
+
+/* Vista do Desktop MÃ©dio*/
+@media only screen and (min-width: 1025px) and (max-width: 1290px) {
+  .description {
+    width: 40vw;
+  }
+  .gallery > nav > ul > li > a {
+    font-size: 1.5em;
+    line-height: 10vh;
+  }
+  .video-wrapper {
+    width: 70vw;
+  }
+  .imagens > figure > img {
+    max-width: 70vw;
+  }
+}
+
+/*Vista de Desktops and laptops*/
+@media only screen and (min-width: 1291px) and (max-width: 1823px) {
+  .description {
+    width: 40vw;
+  }
+  .gallery > nav > ul > li > a {
+    font-size: 1em;
+    line-height: 10vh;
+  }
+  .video-wrapper {
+    width: 50vw;
+  }
+  .imagens > figure > img {
+    max-width: 50vw;
+  }
+}
+
+/*Vista de Large screens*/
+@media only screen and (min-width: 1824px) {
+  .description {
+    width: 30vw;
+  }
+  .gallery > nav > ul > li > a {
+    font-size: 1.5em;
+    line-height: 10vh;
+  }
+  .video-wrapper {
+    width: 50vw;
+  }
+  .imagens > figure > img {
+    max-width: 50vw;
+  }
+}
